@@ -1,0 +1,124 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.block {
+    margin-bottom: 20px;
+    display: block;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"],
+input[type="range"],
+button {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="number"],
+input[type="range"] {
+    width: calc(100% - 30px);
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+#resultsBlock {
+    padding-top: 20px;
+}
+
+#resultsBlock p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Rimuovere le regole CSS esistenti per i valori dei campi VG, PG e Aroma */
+.value {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Aggiungi la regola CSS per posizionare il secondo blocco in fondo */
+.block2 {
+    display: block; /* Imposta l'ordine del secondo blocco per renderlo sempre l'ultimo */
+}
+
+/****************************
+RESPONSIVIZZIAMO IL TUTTO
+*****************************/
+/* Stili per il layout desktop */
+
+.container {
+    /*display: flex; */
+    justify-content: center;
+    flex-wrap: wrap; /* Aggiunto per consentire il wrapping dei blocchi */
+}
+
+
+.block {
+    margin-right: 20px;
+    text-align: center;
+}
+
+.value {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Stili per il layout mobile */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block {
+        margin-bottom: 20px;
+    }
+
+    .value {
+        display: block;
+        margin: 5px auto;
+        width: auto;
+    }
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore Liquido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="block">
+            <label for="liquidAmount">Quanti grammi di liquido vuoi fare?</label>
+            <input type="number" id="liquidAmount" min="0" placeholder="30">
+            <br>
+            <label>VG:</label>
+            <span id="vgValue" class="value">70</span>g
+            <input type="range" id="vgSlider" min="0" max="100" value="70">
+            <br>
+            <label>PG:</label>
+            <span id="pgValue" class="value">30</span>g
+            <input type="range" id="pgSlider" min="0" max="100" value="30">
+            <br>
+            <label for="aromaPercentage">Che percentuale di aroma vuoi inserire?</label>
+            <span id="aromaValue" class="value">10</span>g
+            <input type="range" id="aromaPercentage" min="0" max="100" value="10">
+            <br>
+            <button id="calculateButton">Calcola</button>
+        </div>
+        <div class="block2">
+            <div id="resultsBlock" class="block hidden">
+                <p id="vgToUse"></p>
+                <p id="pgToUse"></p>
+                <p id="aromaToUse"></p>
+            </div>
+            <div id="secondBlock" class="block hidden">
+                <p id="vgToUseResult"></p>
+                <p id="pgToUseResult"></p>
+                <p id="aromaToUseResult"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
